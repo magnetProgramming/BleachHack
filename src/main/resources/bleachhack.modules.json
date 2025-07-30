@@ -97,6 +97,8 @@
     "Trajectories",
     "UI",
     "Xray",
-    "Zoom"
+    "Zoom",
+	"DeathCoordinates",
+	"StreamerMode"
   ]
 }

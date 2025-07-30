@@ -53,7 +53,7 @@ public class BleachCreditsScreen extends WindowScreen {
 	}
 
 	public BleachCreditsScreen() {
-		super(Text.literal("BleachHack Credits"));
+		super(Text.literal("Pibb Credits"));
 	}
 
 	public void init() {

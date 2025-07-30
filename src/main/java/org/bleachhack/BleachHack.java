@@ -90,7 +90,7 @@ public class BleachHack implements ModInitializer {
 			BleachTitleScreen.customTitleScreen = false;
 		}
 
-		BleachLogger.logger.log(Level.INFO, "Loaded BleachHack (Phase 1) in %d ms.", System.currentTimeMillis() - initStartTime);
+		BleachLogger.logger.log(Level.INFO, "Loaded Pibb (Phase 1) in %d ms.", System.currentTimeMillis() - initStartTime);
 	}
 
 	// Phase 2
@@ -111,7 +111,7 @@ public class BleachHack implements ModInitializer {
 
 		BleachFileHelper.startSavingExecutor();
 
-		BleachLogger.logger.log(Level.INFO, "Loaded BleachHack (Phase 2) in %d ms.", System.currentTimeMillis() - initStartTime);
+		BleachLogger.logger.log(Level.INFO, "Loaded Pibb (Phase 2) in %d ms.", System.currentTimeMillis() - initStartTime);
 	}
 
 	public static JsonObject getUpdateJson() {

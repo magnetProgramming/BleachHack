@@ -32,15 +32,15 @@ public class WindowScrollbarWidget extends WindowWidget {
 
 		//System.out.println(getScrollbarHeight());
 		if (pos != null) {
-			int color = mouseX >= pos[0] && mouseX <= pos[0] + pos[2] && mouseY >= pos[1] && mouseY <= pos[1] + pos[3] ? 0x906060ff : 0x9040409f;
+			int color = mouseX >= pos[0] && mouseX <= pos[0] + pos[2] && mouseY >= pos[1] && mouseY <= pos[1] + pos[3] ? 0x90BA2323 : 0x90B80000;
 
 			Window.fill(drawContext, pos[0], pos[1], pos[0] + pos[2], pos[1] + pos[3], color);
 
 			int middleY = pos[1] + (int) (pos[3] / 2d);
 
-			drawContext.fill(pos[0] + 3, middleY - 3, pos[0] + 7, middleY - 2, 0xff7060ff);
-			drawContext.fill(pos[0] + 3, middleY, pos[0] + 7, middleY + 1, 0xff7060ff);
-			drawContext.fill(pos[0] + 3, middleY + 3, pos[0] + 7, middleY + 4, 0xff7060ff);
+			drawContext.fill(pos[0] + 3, middleY - 3, pos[0] + 7, middleY - 2, 0xFFFF6060);
+			drawContext.fill(pos[0] + 3, middleY, pos[0] + 7, middleY + 1, 0xFFFF6060);
+			drawContext.fill(pos[0] + 3, middleY + 3, pos[0] + 7, middleY + 4, 0xFFFF6060);
 
 			if (buttonDown) {
 				moveScrollbar(mouseY - lastY);

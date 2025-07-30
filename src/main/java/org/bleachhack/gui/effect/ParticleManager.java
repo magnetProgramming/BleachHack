@@ -34,7 +34,7 @@ public class ParticleManager {
 
 		for (Particle p : particles) {
 			for (int[] p1 : p.getParticles()) {
-				drawContext.fill(p1[0], p1[1], p1[0] + 1, p1[1] + 1, 0xffffc0e0);
+				drawContext.fill(p1[0], p1[1], p1[0] + 1, p1[1] + 1, 0xFFFFFFFF);
 			}
 		}
 	}

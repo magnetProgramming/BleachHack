@@ -9,9 +9,11 @@
 package org.bleachhack.mixin;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,6 +21,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.world.World;
+
 import org.bleachhack.module.Module;
 import org.bleachhack.module.ModuleManager;
 import org.bleachhack.module.mods.SpeedMine;
@@ -33,8 +36,8 @@ public abstract class MixinPlayerEntity extends LivingEntity {
 
 	@Shadow private PlayerInventory inventory;
 
-	private MixinPlayerEntity(EntityType<? extends LivingEntity> entityType, World world) {
-		super(entityType, world);
+	protected MixinPlayerEntity(EntityType<? extends LivingEntity> entityType, World world) {
+	    super(entityType, world);
 	}
 
 	@Inject(method = "getBlockBreakingSpeed", at = @At("HEAD"), cancellable = true)

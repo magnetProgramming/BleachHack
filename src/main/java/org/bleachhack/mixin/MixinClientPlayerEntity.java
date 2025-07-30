@@ -10,6 +10,7 @@ package org.bleachhack.mixin;
 
 import org.bleachhack.BleachHack;
 import org.bleachhack.event.events.EventClientMove;
+import org.bleachhack.event.events.EventPlayerDeath;
 import org.bleachhack.event.events.EventSendMovementPackets;
 import org.bleachhack.event.events.EventSwingHand;
 import org.bleachhack.module.ModuleManager;
@@ -36,6 +37,8 @@ import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.MovementType;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
@@ -88,7 +91,7 @@ public class MixinClientPlayerEntity extends AbstractClientPlayerEntity {
 			info.cancel();
 		}
 	}
-
+	
 	@Inject(method = "pushOutOfBlocks", at = @At("HEAD"), cancellable = true)
 	private void pushOutOfBlocks(double x, double d, CallbackInfo ci) {
 		if (ModuleManager.getModule(Freecam.class).isEnabled()) {

@@ -28,6 +28,8 @@
 	"CmdSpammer",
 	"CmdTerrain",
 	"CmdToggle",
-	"CmdWatermark"
+	"CmdWatermark",
+	"CmdCopyCoords",
+	"CmdStreamerMode"
   ]
 }

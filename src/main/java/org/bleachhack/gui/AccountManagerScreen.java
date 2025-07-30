@@ -166,13 +166,13 @@ public class AccountManagerScreen extends WindowScreen {
 
 				boolean hover = getWindow(0).selected && mouseX >= x + 1 && mouseX <= x + listW - (shrink ? 12 : 1) && mouseY >= curY && mouseY <= curY + 27;
 				drawEntry(drawContext, accounts.get(c), x + 2, curY + 1, listW - (shrink ? 13 : 3), 26,
-						selected == c ? 0x6090e090 : hover ? 0x60b070f0 : 0x60606090);
+						selected == c ? 0x60BA2323 : hover ? 0x60FF6060 : 0x60404040);
 
 				if (hover)
 					hovered = c;
 			}
 
-			drawContext.fill(x + listW, y + 12, x + listW + 1, y + h - 1, 0xff606090);
+			drawContext.fill(x + listW, y + 12, x + listW + 1, y + h - 1, 0x60BA2323);
 		}
 	}
 

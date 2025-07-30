@@ -103,15 +103,15 @@ public class Window {
 
 	protected void drawBackground(DrawContext drawContext, int mouseX, int mouseY, TextRenderer textRend) {
 		/* background */
-		drawContext.fill(x1, y1 + 1, x1 + 1, y2 - 1, 0xff6060b0);
-		horizontalGradient(x1 + 1, y1, x2 - 1, y1 + 1, 0xff6060b0, 0xff8070b0);
-		drawContext.fill(x2 - 1, y1 + 1, x2, y2 - 1, 0xff8070b0);
-		horizontalGradient(x1 + 1, y2 - 1, x2 - 1, y2, 0xff6060b0, 0xff8070b0);
+		drawContext.fill(x1, y1 + 1, x1 + 1, y2 - 1, 0x998C1414);
+		horizontalGradient(x1 + 1, y1, x2 - 1, y1 + 1, 0x998C1414, 0x998C1414); // didn't realize you need to add the FF prefix otherwise its alpha but transparent kinda looks cool soo.
+		drawContext.fill(x2 - 1, y1 + 1, x2, y2 - 1, 0x998C1414);
+		horizontalGradient(x1 + 1, y2 - 1, x2 - 1, y2, 0x998C1414, 0x998C1414);
 
-		drawContext.fill(x1 + 1, y1 + 12, x2 - 1, y2 - 1, 0x90606090);
+		drawContext.fill(x1 + 1, y1 + 12, x2 - 1, y2 - 1, 0x998C1414);
 
 		/* title bar */
-		horizontalGradient(x1 + 1, y1 + 1, x2 - 1, y1 + 12, (selected ? 0xff6060b0 : 0xff606060), (selected ? 0xff8070b0 : 0xffa0a0a0));
+		horizontalGradient(x1 + 1, y1 + 1, x2 - 1, y1 + 12, (selected ? 0xFFBA2323 : 0xBA2323), (selected ? 0xFFB80000 : 0xFFB80000));
 
 		/* buttons */
 		drawContext.drawText(textRend, "x", x2 - 10, y1 + 3, 0, false);
@@ -178,11 +178,11 @@ public class Window {
 	}
 
 	public static void fill(DrawContext drawContext, int x1, int y1, int x2, int y2) {
-		fill(drawContext, x1, y1, x2, y2, 0xff6060b0, 0xff8070b0, 0x00000000);
+		fill(drawContext, x1, y1, x2, y2, 0xFFBA2323, 0xFFB80000, 0x00000000);
 	}
 
 	public static void fill(DrawContext drawContext, int x1, int y1, int x2, int y2, int fill) {
-		fill(drawContext, x1, y1, x2, y2, 0xff6060b0, 0xff8070b0, fill);
+		fill(drawContext, x1, y1, x2, y2, 0xFFBA2323, 0xFFB80000, fill);
 	}
 
 	public static void fill(DrawContext drawContext, int x1, int y1, int x2, int y2, int colTop, int colBot, int colFill) {

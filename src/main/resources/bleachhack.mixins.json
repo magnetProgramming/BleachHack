@@ -57,7 +57,9 @@
     "MixinSharedConstants",
     "MixinSoundSystem",
     "MixinTitleScreen",
-    "MixinWorldRenderer"
+    "MixinWorldRenderer",
+	"MixinDeathScreen",
+	"MixinDebugHud"
   ],
   "mixinPriority": 899,
   "injectors": {

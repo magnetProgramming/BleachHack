@@ -64,11 +64,8 @@ public class BleachTitleScreen extends WindowScreen {
 	@Override
 	public void init() {
 		super.init();
-
-		addWindow(new Window(width / 8,
-				height / 8,
-				width - width / 8,
-				height - height / 8 + 2, "BleachHack", new ItemStack(Items.MUSIC_DISC_CAT)));
+		
+		addWindow(new Window(width / 8, height / 8, width - width / 8, height - height / 8 + 2, "Pibb", new ItemStack(Items.AIR)));
 
 		int w = getWindow(0).x2 - getWindow(0).x1;
 		int h = getWindow(0).y2 - getWindow(0).y1;
@@ -106,7 +103,7 @@ public class BleachTitleScreen extends WindowScreen {
 					MutableText bhText = Text.literal("");
 
 					int i = 0;
-					for (char c: "BleachHack".toCharArray()) {
+					for (char c: "Pibb".toCharArray()) {
 						int fi = i++;
 						bhText.append(
 								Text.literal(String.valueOf(c)).styled(s -> s.withColor(TextColor.fromRgb(UI.getRainbowFromSettings(fi)))));
@@ -147,11 +144,11 @@ public class BleachTitleScreen extends WindowScreen {
 		this.renderBackground(drawContext, mouseX, mouseY, delta);
 
 		int copyWidth = this.textRenderer.getWidth("Copyright Mojang AB. Do not distribute!") + 2;
-		drawContext.drawTextWithShadow(textRenderer, "Copyright Mojang AB. Do not distribute!", width - copyWidth, height - 10, -1);
+		drawContext.drawTextWithShadow(textRenderer, "Copyright Mojang AB. Do not distribute!", width - copyWidth, height - 10, 0xFF1F1F1F);
 		drawContext.drawTextWithShadow(textRenderer, "Fabric: " + FabricLoader.getInstance().getModContainer("fabricloader").get().getMetadata().getVersion().getFriendlyString(),
-				4, height - 30, -1);
-		drawContext.drawTextWithShadow(textRenderer, "Minecraft: " + SharedConstants.getGameVersion().getName(), 4, height - 20, -1);
-		drawContext.drawTextWithShadow(textRenderer, "Logged in as: §a" + client.getSession().getUsername(), 4, height - 10, -1);
+				4, height - 30, 0xFF1F1F1F);
+		drawContext.drawTextWithShadow(textRenderer, "Minecraft: " + SharedConstants.getGameVersion().getName(), 4, height - 20, 0xFF1F1F1F);
+		drawContext.drawTextWithShadow(textRenderer, "Logged in as: §a" + client.getSession().getUsername(), 4, height - 10, 0xFF1F1F1F);
 
 		super.render(drawContext, mouseX, mouseY, delta);
 
