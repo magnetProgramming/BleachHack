@@ -28,7 +28,7 @@ public abstract class WindowScreen extends Screen {
 
 	private List<Window> windows = new ArrayList<>();
 	
-	private static final Identifier PIBBBackground = new Identifier("bleachhack", "textures/gui/pibbBackground.png");
+	private static final Identifier PIBBBackground = new Identifier("bleachhack", "textures/gui/pibb_background.png");
 
 
 	// <Layer, Window Index>
